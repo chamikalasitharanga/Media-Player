@@ -32,6 +32,7 @@ public class Main {
         albums.get(0).addToPlayList("Better Days",playList_1);
         albums.get(0).addToPlayList("Paranoid",playList_1);
         albums.get(1).addToPlayList("Fame",playList_1);
+        albums.get(1).addToPlayList("When Thugz Cry",playList_1);
 
         play(playList_1);
     }
@@ -85,7 +86,7 @@ public class Main {
                     if (listIterator.hasPrevious()){
                         System.out.println("now playing " +listIterator.previous().toString());
                     }else {
-                        System.out.println("We are the first song");
+                        System.out.println("No prevoius song !");
                         forward = false;
                     }
                     break;
@@ -112,11 +113,13 @@ public class Main {
                     printList(playList);
                     break;
 
-                case 5:
+                /*case 5:
                     printMenu();
                     break;
 
-                case 6:
+                 */
+
+                case 5:
                     if (playList.size()>0){
                         listIterator.remove();
                         if (listIterator.hasNext()){
@@ -139,8 +142,8 @@ public class Main {
                 "2 - To play previous song\n"+
                 "3 - To replay the current song\n"+
                 "4 - List of all songs\n"+
-                "5 - Print all available option\n"+
-                "6 - Delete current Song");
+                // "5 - Print all available option\n"+
+                "5 - Delete current Song");
     }
 
     private static void printList(LinkedList<Song> playList_1){
